@@ -10,7 +10,7 @@ export default function BCDispatchPage() {
         tagline: "Professional Dispatch System",
         description:
           "A modern dispatch platform built for police, fire, EMS and communications departments. Manage calls, units, statuses and communications from one powerful system.",
-        image: "/products/bc-dispatch.png",
+        image: null,
         status: "COMING SOON",
         price: "Coming Soon",
         features: [

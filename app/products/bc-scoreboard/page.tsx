@@ -10,7 +10,7 @@ export default function BCScoreboardPage() {
         tagline: "Professional FiveM Scoreboard",
         description:
           "A professional FiveM scoreboard displaying live player information, server statistics, department counts and custom server branding.",
-        image: "/products/bc-scoreboard.png",
+        image: null,
         status: "COMING SOON",
         price: "Coming Soon",
         features: [

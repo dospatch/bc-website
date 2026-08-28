@@ -10,7 +10,7 @@ export default function BCTaxiPage() {
         tagline: "Complete Taxi Job System",
         description:
           "A complete taxi job system with driver management, customer trips, fares and configurable payouts designed for immersive FiveM roleplay.",
-        image: "/products/bc-taxi.png",
+        image: null,
         status: "COMING SOON",
         price: "Coming Soon",
         features: [

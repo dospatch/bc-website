@@ -10,7 +10,7 @@ export default function BCDOJPage() {
         tagline: "Justice Management System",
         description:
           "A complete justice-management platform for courts, prosecutors, attorneys and law enforcement agencies. Manage cases, charges, court records, warrants and more.",
-        image: "/products/bc-doj.png",
+        image: null,
         status: "COMING SOON",
         price: "Coming Soon",
         features: [
