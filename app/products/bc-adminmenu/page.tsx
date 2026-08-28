@@ -1,4 +1,4 @@
-import ProductPage from "../../../components/ProductPage";
+import ProductPage from "@/components/ProductPage";
 
 export default function BCAdminMenuPage() {
   return (
