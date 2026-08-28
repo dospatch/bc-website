@@ -112,6 +112,7 @@ export default function ProductsPage() {
               <small>SCRIPTS</small>
             </span>
           </Link>
+          <img src="/logo.png" alt="BC Custom Scripts" className="logo-image" />
 
           <nav>
             <Link href="/">Home</Link>

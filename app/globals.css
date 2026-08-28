@@ -1497,3 +1497,483 @@ footer {
     padding: 28px;
   }
 }
+
+/* =========================================================
+   BC CUSTOMER AUTH
+========================================================= */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 55px 20px;
+  background: #05080d;
+}
+
+.auth-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(37,99,235,.13),
+      transparent 35%
+    );
+}
+
+.auth-container {
+  position: relative;
+  width: 100%;
+  max-width: 455px;
+}
+
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.auth-logo > span:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-logo strong {
+  font-size: 12px;
+}
+
+.auth-logo small {
+  margin-top: 2px;
+  color: #d6a83c;
+  font-size: 7px;
+  letter-spacing: 3px;
+}
+
+.auth-card {
+  position: relative;
+  padding: 38px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 15px;
+  background: #0b1017;
+  box-shadow: 0 30px 90px rgba(0,0,0,.45);
+}
+
+.auth-heading {
+  margin-bottom: 30px;
+}
+
+.auth-heading h1 {
+  margin: 10px 0 12px;
+  color: #f1f5f9;
+  font-size: 34px;
+  letter-spacing: -1.5px;
+}
+
+.auth-heading p {
+  margin: 0;
+  color: #65758a;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.auth-card label:not(.checkbox-label) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #91a0b3;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.auth-card input:not([type="checkbox"]) {
+  width: 100%;
+  height: 45px;
+  padding: 0 13px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 7px;
+  outline: none;
+  background: #080d13;
+  color: #dbe4ef;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.auth-card input:not([type="checkbox"]):focus {
+  border-color: rgba(96,165,250,.55);
+}
+
+.auth-card input::placeholder {
+  color: #344152;
+}
+
+.auth-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.auth-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -5px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #667589;
+  font-size: 10px;
+}
+
+.checkbox-label input {
+  accent-color: #2563eb;
+}
+
+.auth-options a,
+.auth-register a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.auth-button {
+  height: 45px;
+  margin-top: 5px;
+  border: 0;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.auth-button:hover {
+  background: #3b82f6;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,.06);
+}
+
+.auth-divider span {
+  color: #3f4d5e;
+  font-size: 8px;
+}
+
+.auth-register {
+  margin: 0;
+  color: #59697b;
+  text-align: center;
+  font-size: 10px;
+}
+
+.auth-register a {
+  margin-left: 5px;
+}
+
+.terms {
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.auth-back {
+  display: block;
+  margin-top: 25px;
+  color: #526174;
+  text-align: center;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.auth-back:hover {
+  color: #60a5fa;
+}
+
+/* =========================================================
+   CUSTOMER DASHBOARD
+========================================================= */
+
+.dashboard-page {
+  min-height: calc(100vh - 66px);
+  padding: 75px 0 100px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.dashboard-header h1 {
+  margin: 12px 0;
+  color: #f1f5f9;
+  font-size: clamp(35px, 5vw, 54px);
+  letter-spacing: -2px;
+}
+
+.dashboard-header h1 span {
+  color: #60a5fa;
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: #65758a;
+  font-size: 13px;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 70px;
+}
+
+.dashboard-stats div {
+  padding: 23px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 10px;
+  background: #0b1017;
+}
+
+.dashboard-stats span {
+  display: block;
+  margin-bottom: 12px;
+  color: #526174;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.dashboard-stats strong {
+  color: #dce5f0;
+  font-size: 21px;
+}
+
+.dashboard-section-heading {
+  margin-bottom: 25px;
+}
+
+.dashboard-section-heading h2 {
+  margin: 10px 0 0;
+  color: #e6edf5;
+  font-size: 28px;
+}
+
+.dashboard-section-heading h2 span {
+  color: #60a5fa;
+}
+
+.customer-products {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.customer-product {
+  display: grid;
+  grid-template-columns: 58px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 10px;
+  background: #0b1017;
+}
+
+.customer-product-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(96,165,250,.18);
+  border-radius: 10px;
+  background: rgba(37,99,235,.08);
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.customer-product-info > span {
+  color: #4ade80;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.customer-product-info h3 {
+  margin: 5px 0;
+  color: #dce5f0;
+  font-size: 15px;
+}
+
+.customer-product-info p {
+  margin: 0 0 6px;
+  color: #617084;
+  font-size: 10px;
+}
+
+.customer-product-info small {
+  color: #3f4e60;
+  font-size: 8px;
+}
+
+.customer-product-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.customer-product-actions button,
+.customer-product-actions a {
+  height: 34px;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 6px;
+  background: #101721;
+  color: #8c9aac;
+  font-family: inherit;
+  font-size: 8px;
+  text-decoration: none;
+}
+
+.customer-product-actions button:hover,
+.customer-product-actions a:hover {
+  border-color: rgba(96,165,250,.25);
+  color: #60a5fa;
+}
+
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.dashboard-panel {
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 10px;
+  background: #0b1017;
+}
+
+.panel-heading {
+  margin-bottom: 20px;
+}
+
+.panel-heading h3 {
+  margin: 8px 0 0;
+  color: #dce5f0;
+  font-size: 17px;
+}
+
+.license-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.license-row:last-child {
+  border-bottom: 0;
+}
+
+.license-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.license-row strong {
+  color: #cbd5e1;
+  font-size: 11px;
+}
+
+.license-row span {
+  color: #465568;
+  font-family: monospace;
+  font-size: 8px;
+}
+
+.license-row b {
+  color: #4ade80;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.dashboard-panel > p {
+  color: #617084;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.dashboard-panel > a {
+  color: #60a5fa;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+@media(max-width:800px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .customer-product {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .customer-product-actions {
+    grid-column: 1 / -1;
+  }
+
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:520px) {
+  .auth-card {
+    padding: 25px;
+  }
+
+  .auth-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
