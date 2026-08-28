@@ -3,6 +3,14 @@ import Link from "next/link";
 export type Product = {
   name: string;
   category: string;
+  image: string;
+  tagline: string;
+  description: string;
+  features: string[];
+  integrations: string[];
+  requirements: string[];
+  status: string;
+};
   tagline: string;
   description: string;
   features: string[];

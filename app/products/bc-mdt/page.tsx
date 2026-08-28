@@ -6,6 +6,7 @@ export default function BCMdtPage() {
       <header className="navbar">
         <div className="nav-container">
           <Link href="/" className="logo">
+            <img src="/mdt.png" alt="BC Logo" />
             <span className="logo-box">BC</span>
 
             <span>

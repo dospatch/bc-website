@@ -2060,3 +2060,20 @@ footer {
     height: 210px;
   }
 }
+
+.large-product-image {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: #080d13;
+}
+
+.large-product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
