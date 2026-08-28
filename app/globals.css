@@ -134,6 +134,13 @@ a {
   transform: scale(1.04);
 }
 
+.product-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
 .product-status {
   position: absolute;
   top: 12px;

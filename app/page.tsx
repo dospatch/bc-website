@@ -31,7 +31,7 @@ const products = [
     tagline: "Professional Dispatch System",
     description:
       "A modern dispatch platform built for police, fire, EMS and communications departments. Manage calls, units, statuses and communications from one system.",
-    image: "/products/bc-dispatch.png",
+    image: null,
     status: "COMING SOON",
     price: "Coming Soon",
     features: [
@@ -52,7 +52,7 @@ const products = [
     tagline: "Justice Management System",
     description:
       "A complete justice-management platform for courts, prosecutors, attorneys and law enforcement agencies.",
-    image: "/products/bc-doj.png",
+    image: null,
     status: "COMING SOON",
     price: "Coming Soon",
     features: [
@@ -73,7 +73,7 @@ const products = [
     tagline: "FiveM Server Scoreboard",
     description:
       "A professional FiveM scoreboard designed to display live player information, server statistics and department activity.",
-    image: "/products/bc-scoreboard.png",
+    image: null,
     status: "COMING SOON",
     price: "Coming Soon",
     features: [
@@ -116,7 +116,7 @@ const products = [
     tagline: "Complete Taxi Job System",
     description:
       "A complete taxi job system with driver management, customer trips, fares and configurable payouts.",
-    image: "/products/bc-taxi.png",
+    image: null,
     status: "COMING SOON",
     price: "Coming Soon",
     features: [
@@ -233,19 +233,29 @@ export default function ProductsPage() {
               >
                 {/* PRODUCT IMAGE */}
 
-                <div className="product-image-container">
-                  <Image
-                    src={product.image}
-                    alt={`${product.name} product preview`}
-                    fill
-                    sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                    className="product-image"
-                  />
+                {product.image && (
+                  <div className="product-image-container">
+                    <Image
+                      src={product.image}
+                      alt={`${product.name} product preview`}
+                      fill
+                      sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                      className="product-image"
+                    />
 
-                  <div className="product-status">
-                    {product.status}
+                    <div className="product-status">
+                      {product.status}
+                    </div>
                   </div>
-                </div>
+                )}
+
+                {!product.image && (
+                  <div className="product-image-container product-image-placeholder">
+                    <div className="product-status">
+                      {product.status}
+                    </div>
+                  </div>
+                )}
 
                 {/* PRODUCT BRAND */}
 
