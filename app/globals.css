@@ -828,3 +828,64 @@ footer {
     margin-top: 20px;
   }
 }
+
+.products-hero {
+  padding: 110px 0 80px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(59,130,246,.12),
+      transparent 40%
+    );
+}
+
+.products-hero h1 {
+  margin: 15px 0;
+  font-family: "Space Grotesk";
+  font-size: clamp(45px, 6vw, 70px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.products-hero h1 span {
+  background: linear-gradient(
+    100deg,
+    white,
+    #60a5fa
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.products-hero p {
+  max-width: 600px;
+  color: #7e8998;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.product-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  color: #7f8b9a;
+  font-size: 10px;
+  line-height: 2;
+}
+
+.product-features li {
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+
+@media(max-width:600px) {
+  .products-hero {
+    padding: 75px 0 60px;
+  }
+
+  .products-hero h1 {
+    font-size: 45px;
+  }
+}
+
