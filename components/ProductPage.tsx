@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export type Product = {
@@ -23,14 +24,14 @@ export default function ProductPage({
 }: ProductPageProps) {
   return (
     <main>
-      {/* =========================
-          NAVBAR
-      ========================== */}
+      {/* NAVBAR */}
 
       <header className="navbar">
         <div className="nav-container">
           <Link href="/" className="logo">
-            <span className="logo-box">BC</span>
+            <span className="logo-box">
+              BC
+            </span>
 
             <span>
               <strong>BC CUSTOM</strong>
@@ -39,11 +40,18 @@ export default function ProductPage({
           </Link>
 
           <nav>
-            <Link href="/">Home</Link>
-            <Link href="/products">Products</Link>
+            <Link href="/">
+              Home
+            </Link>
+
+            <Link href="/products">
+              Products
+            </Link>
+
             <Link href="/#integrations">
               Integrations
             </Link>
+
             <Link href="/#support">
               Support
             </Link>
@@ -58,9 +66,7 @@ export default function ProductPage({
         </div>
       </header>
 
-      {/* =========================
-          PRODUCT HERO
-      ========================== */}
+      {/* HERO */}
 
       <section className="product-detail-hero">
         <div className="section-container">
@@ -74,7 +80,7 @@ export default function ProductPage({
 
           <div className="product-detail-grid">
 
-            {/* PRODUCT INFORMATION */}
+            {/* LEFT */}
 
             <div>
               <span className="eyebrow">
@@ -111,9 +117,8 @@ export default function ProductPage({
 
               </div>
 
-              {/* INTEGRATIONS */}
-
               <div className="product-meta">
+
                 {product.integrations
                   .slice(0, 3)
                   .map((integration) => (
@@ -127,12 +132,14 @@ export default function ProductPage({
                       </span>
                     </div>
                   ))}
+
               </div>
             </div>
 
-            {/* PRODUCT IMAGE */}
+            {/* RIGHT */}
 
             <div className="product-preview">
+
               <div className="preview-window">
 
                 <div className="preview-bar">
@@ -141,26 +148,27 @@ export default function ProductPage({
                   <span />
                 </div>
 
-                <div className="preview-content product-image-container">
-                  <img
+                <div className="preview-image">
+
+                  <Image
                     src={product.image}
                     alt={`${product.name} preview`}
-                    className="product-image"
+                    fill
+                    priority
+                    sizes="(max-width: 900px) 100vw, 50vw"
                   />
+
                 </div>
 
               </div>
 
-              <div className="preview-glow" />
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* =========================
-          FEATURES
-      ========================== */}
+      {/* FEATURES */}
 
       <section
         id="features"
@@ -178,7 +186,7 @@ export default function ProductPage({
               Everything your
               <span>
                 {" "}
-                server needs.
+                department needs.
               </span>
             </h2>
 
@@ -212,9 +220,8 @@ export default function ProductPage({
                   </h3>
 
                   <p>
-                    Professional{" "}
-                    {feature.toLowerCase()} tools
-                    built into {product.name}.
+                    Professional {feature.toLowerCase()} tools built into{" "}
+                    {product.name}.
                   </p>
 
                 </article>
@@ -222,12 +229,11 @@ export default function ProductPage({
             )}
 
           </div>
+
         </div>
       </section>
 
-      {/* =========================
-          INTEGRATIONS
-      ========================== */}
+      {/* INTEGRATIONS */}
 
       <section className="section compatibility-section">
         <div className="section-container">
@@ -235,14 +241,14 @@ export default function ProductPage({
           <div className="section-heading center">
 
             <span className="eyebrow">
-              BUILT TO INTEGRATE
+              INTEGRATIONS
             </span>
 
             <h2>
-              Works with your
+              Built to work with
               <span>
                 {" "}
-                server.
+                your server.
               </span>
             </h2>
 
@@ -274,12 +280,11 @@ export default function ProductPage({
             )}
 
           </div>
+
         </div>
       </section>
 
-      {/* =========================
-          REQUIREMENTS
-      ========================== */}
+      {/* REQUIREMENTS */}
 
       <section className="section requirements-section">
         <div className="section-container">
@@ -301,10 +306,9 @@ export default function ProductPage({
               </h2>
 
               <p>
-                {product.name} is designed
-                to fit into an existing FiveM
-                server without unnecessary
-                complexity.
+                Everything required to
+                run {product.name} will be
+                provided with your purchase.
               </p>
 
             </div>
@@ -327,8 +331,8 @@ export default function ProductPage({
                     </strong>
 
                     <p>
-                      Required for{" "}
-                      {product.name}.
+                      Required for
+                      {` ${product.name}`}.
                     </p>
 
                   </div>
@@ -338,12 +342,11 @@ export default function ProductPage({
             </div>
 
           </div>
+
         </div>
       </section>
 
-      {/* =========================
-          PURCHASE
-      ========================== */}
+      {/* PURCHASE */}
 
       <section
         id="purchase"
@@ -394,12 +397,11 @@ export default function ProductPage({
             </div>
 
           </div>
+
         </div>
       </section>
 
-      {/* =========================
-          FOOTER
-      ========================== */}
+      {/* FOOTER */}
 
       <footer>
 
