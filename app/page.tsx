@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const products = [
@@ -5,96 +6,127 @@ const products = [
     slug: "bc-mdt",
     name: "BC-MDT",
     category: "Law Enforcement",
+    tagline: "Mobile Data Terminal",
     description:
-      "A complete Mobile Data Terminal for FiveM police, sheriff, state police and federal departments.",
+      "A modern, professional Mobile Data Terminal designed for FiveM roleplay communities. Manage people, vehicles, reports, warrants, BOLOs and more from one powerful system.",
+    image: "/products/bc-mdt.png",
+    status: "COMING SOON",
+    price: "Coming Soon",
     features: [
-      "CAD integration",
-      "Player database",
-      "Vehicle database",
+      "Character Database",
+      "Vehicle Database",
       "Warrants",
-      "BOLOs",
+      "BOLO System",
       "Mugshots",
-      "NCIC-style records",
+      "Reports",
+      "Citations",
+      "NCIC-Style Search",
     ],
   },
+
   {
     slug: "bc-dispatch",
     name: "BC-Dispatch",
     category: "Communications",
+    tagline: "Professional Dispatch System",
     description:
-      "A modern dispatch platform built for police, fire, EMS and communications departments.",
+      "A modern dispatch platform built for police, fire, EMS and communications departments. Manage calls, units, statuses and communications from one system.",
+    image: "/products/bc-dispatch.png",
+    status: "COMING SOON",
+    price: "Coming Soon",
     features: [
-      "Live calls",
-      "Unit management",
-      "911 calls",
-      "Dispatch statuses",
-      "Department support",
-      "CAD integration",
-      "Radio integration",
+      "Live Calls",
+      "911 Calls",
+      "Unit Management",
+      "Dispatch Status",
+      "CAD Integration",
+      "Radio Integration",
+      "Department Support",
     ],
   },
+
   {
     slug: "bc-doj",
     name: "BC-DOJ",
     category: "Justice",
+    tagline: "Justice Management System",
     description:
-      "A complete justice-management system for courts, prosecutors, attorneys and law enforcement.",
+      "A complete justice-management platform for courts, prosecutors, attorneys and law enforcement agencies.",
+    image: "/products/bc-doj.png",
+    status: "COMING SOON",
+    price: "Coming Soon",
     features: [
       "Cases",
-      "Court records",
+      "Court Records",
       "Warrants",
       "Citations",
       "Charges",
       "Judges",
-      "Attorney management",
+      "Attorney Management",
     ],
   },
+
   {
     slug: "bc-scoreboard",
     name: "BC-Scoreboard",
     category: "Core",
+    tagline: "FiveM Server Scoreboard",
     description:
-      "A professional FiveM scoreboard with player information and server statistics.",
+      "A professional FiveM scoreboard designed to display live player information, server statistics and department activity.",
+    image: "/products/bc-scoreboard.png",
+    status: "COMING SOON",
+    price: "Coming Soon",
     features: [
-      "Live player count",
-      "Server uptime",
-      "Player avatars",
-      "Department counts",
-      "Custom branding",
-      "QBCore support",
-      "ESX support",
+      "Live Player Count",
+      "Server Uptime",
+      "Player Avatars",
+      "Department Counts",
+      "Custom Branding",
+      "QBCore Support",
+      "ESX Support",
     ],
   },
+
   {
     slug: "bc-banking",
     name: "BC-Banking",
     category: "Economy",
+    tagline: "Modern FiveM Banking System",
     description:
-      "A modern banking experience designed for immersive FiveM roleplay servers.",
+      "A professional banking experience designed to bring a complete financial system to your FiveM roleplay server.",
+    image: "/products/bc-banking.png",
+    status: "COMING SOON",
+    price: "Coming Soon",
     features: [
-      "Bank accounts",
-      "Transactions",
-      "Transfers",
-      "Account history",
-      "Business banking",
-      "Configurable UI",
-      "Framework support",
+      "Personal Accounts",
+      "Business Accounts",
+      "Money Transfers",
+      "Transaction History",
+      "Deposits",
+      "Withdrawals",
+      "Account Management",
+      "Bank Locations",
     ],
   },
+
   {
     slug: "bc-taxi",
     name: "BC-Taxi",
     category: "Jobs",
+    tagline: "Complete Taxi Job System",
     description:
-      "A complete taxi job system with driver management and customer trips.",
+      "A complete taxi job system with driver management, customer trips, fares and configurable payouts.",
+    image: "/products/bc-taxi.png",
+    status: "COMING SOON",
+    price: "Coming Soon",
     features: [
-      "Taxi requests",
-      "Driver status",
-      "Trip management",
-      "Fare system",
-      "Driver payouts",
-      "Job integration",
-      "Configurable rates",
+      "Taxi Requests",
+      "Driver Status",
+      "Trip Management",
+      "Fare System",
+      "Driver Payouts",
+      "Job Integration",
+      "Configurable Rates",
     ],
   },
 ];
@@ -102,6 +134,10 @@ const products = [
 export default function ProductsPage() {
   return (
     <main>
+      {/* =====================================================
+          NAVBAR
+      ===================================================== */}
+
       <header className="navbar">
         <div className="nav-container">
           <Link href="/" className="logo">
@@ -112,69 +148,174 @@ export default function ProductsPage() {
               <small>SCRIPTS</small>
             </span>
           </Link>
-          <img src="/logo.png" alt="BC Custom Scripts" className="logo-image" />
 
           <nav>
             <Link href="/">Home</Link>
-            <Link href="/products">Products</Link>
-            <Link href="/#integrations">Integrations</Link>
-            <Link href="/#support">Support</Link>
+
+            <Link href="/products">
+              Products
+            </Link>
+
+            <Link href="/#integrations">
+              Integrations
+            </Link>
+
+            <Link href="/#support">
+              Support
+            </Link>
           </nav>
 
-          <Link href="/products" className="nav-button">
+          <Link
+            href="/products"
+            className="nav-button"
+          >
             Store
           </Link>
         </div>
       </header>
 
+      {/* =====================================================
+          PRODUCTS HERO
+      ===================================================== */}
+
       <section className="products-hero">
         <div className="section-container">
-          <span className="eyebrow">BC CUSTOM SCRIPTS STORE</span>
+          <span className="eyebrow">
+            BC CUSTOM SCRIPTS STORE
+          </span>
 
           <h1>
             Premium scripts.
             <br />
-            <span>Built for FiveM.</span>
+
+            <span>
+              Built for FiveM.
+            </span>
           </h1>
 
           <p>
-            Explore the BC Custom Scripts ecosystem and
-            bring professional tools to your roleplay server.
+            Professional FiveM resources designed
+            to help communities build better,
+            more immersive roleplay experiences.
           </p>
         </div>
       </section>
 
+      {/* =====================================================
+          PRODUCTS
+      ===================================================== */}
+
       <section className="section">
         <div className="section-container">
+          <div className="products-header">
+            <div>
+              <span className="eyebrow">
+                OUR PRODUCTS
+              </span>
+
+              <h2>
+                The BC Custom
+                <span> ecosystem.</span>
+              </h2>
+            </div>
+
+            <p>
+              Browse our growing collection of
+              professional FiveM resources.
+            </p>
+          </div>
+
           <div className="products">
             {products.map((product) => (
-              <article className="product" key={product.slug}>
-                <div className="product-top">
-                  <div className="product-icon">BC</div>
+              <article
+                className="product"
+                key={product.slug}
+              >
+                {/* PRODUCT IMAGE */}
 
-                  <span className="status">
-                    Coming Soon
+                <div className="product-image-container">
+                  <Image
+                    src={product.image}
+                    alt={`${product.name} product preview`}
+                    fill
+                    sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                    className="product-image"
+                  />
+
+                  <div className="product-status">
+                    {product.status}
+                  </div>
+                </div>
+
+                {/* PRODUCT BRAND */}
+
+                <div className="product-brand-small">
+                  <span className="logo-box">
+                    BC
+                  </span>
+
+                  <span>
+                    <strong>
+                      {product.name}
+                    </strong>
+
+                    <small>
+                      {product.category}
+                    </small>
                   </span>
                 </div>
+
+                {/* CATEGORY */}
 
                 <span className="category">
                   {product.category}
                 </span>
 
-                <h3>{product.name}</h3>
+                {/* PRODUCT NAME */}
 
-                <p>{product.description}</p>
+                <h3>
+                  {product.name}
+                </h3>
+
+                {/* TAGLINE */}
+
+                <h4>
+                  {product.tagline}
+                </h4>
+
+                {/* DESCRIPTION */}
+
+                <p>
+                  {product.description}
+                </p>
+
+                {/* FEATURES */}
 
                 <ul className="product-features">
-                  {product.features.slice(0, 4).map((feature) => (
-                    <li key={feature}>✓ {feature}</li>
-                  ))}
+                  {product.features
+                    .slice(0, 4)
+                    .map((feature) => (
+                      <li key={feature}>
+                        <span>✓</span>
+                        {feature}
+                      </li>
+                    ))}
                 </ul>
 
-                <div className="product-bottom">
-                  <span>Premium Resource</span>
+                {/* PRODUCT FOOTER */}
 
-                  <Link href={`/products/${product.slug}`}>
+                <div className="product-bottom">
+                  <div>
+                    <small>PRICE</small>
+
+                    <strong>
+                      {product.price}
+                    </strong>
+                  </div>
+
+                  <Link
+                    href={`/products/${product.slug}`}
+                  >
                     View Product →
                   </Link>
                 </div>
@@ -184,20 +325,80 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* =====================================================
+          CUSTOM PRODUCT SECTION
+      ===================================================== */}
+
+      <section className="section custom-products-section">
+        <div className="section-container">
+          <div className="custom-products-card">
+            <div>
+              <span className="eyebrow">
+                MORE COMING
+              </span>
+
+              <h2>
+                More tools.
+                <span> More possibilities.</span>
+              </h2>
+
+              <p>
+                BC Custom Scripts is continuously
+                expanding its collection of FiveM
+                resources. New products,
+                integrations and features are
+                coming soon.
+              </p>
+            </div>
+
+            <Link
+              href="/#support"
+              className="secondary-button"
+            >
+              Request a Product
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
+
       <footer>
         <div className="footer-container">
-          <div className="logo">
-            <span className="logo-box">BC</span>
+          <Link href="/" className="logo">
+            <span className="logo-box">
+              BC
+            </span>
 
             <span>
               <strong>BC CUSTOM</strong>
               <small>SCRIPTS</small>
             </span>
+          </Link>
+
+          <div className="footer-links">
+            <Link href="/">
+              Home
+            </Link>
+
+            <Link href="/products">
+              Products
+            </Link>
+
+            <Link href="/#integrations">
+              Integrations
+            </Link>
+
+            <Link href="/#support">
+              Support
+            </Link>
           </div>
 
           <p>
-            © {new Date().getFullYear()} BC Custom Scripts.
-            All rights reserved.
+            © {new Date().getFullYear()} BC
+            Custom Scripts. All rights reserved.
           </p>
         </div>
       </footer>
