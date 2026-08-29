@@ -8,11 +8,15 @@ export default function BCTaxiPage() {
         name: "BC-Taxi",
         category: "Jobs",
         tagline: "Complete Taxi Job System",
+
         description:
           "A complete taxi job system with driver management, customer trips, fares and configurable payouts designed for immersive FiveM roleplay.",
-        image: null,
+
+        image: "/products/bc-taxi.png",
+
         status: "COMING SOON",
         price: "Coming Soon",
+
         features: [
           "Taxi Requests",
           "Driver Status",
@@ -23,12 +27,14 @@ export default function BCTaxiPage() {
           "Configurable Rates",
           "Customer Management",
         ],
+
         integrations: [
           "QBCore",
           "ESX",
           "oxmysql",
           "ox_lib",
         ],
+
         requirements: [
           "FiveM Server",
           "QBCore or ESX",

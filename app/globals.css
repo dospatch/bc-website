@@ -396,3 +396,26 @@ a {
     gap: 15px;
   }
 }
+
+.product-image-container {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  display: block;
+
+  border-radius: 12px;
+}
